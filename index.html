@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html>
+<title> SocialMED </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/bb27808a60.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="top">
+        <div class="bar white card" id="myNavbar">
+            <a href="#home" class="bar-item button wide">SocialMED</a>
+            <!-- Right-sided navbar links -->
+            <div class="right hide-small">
+                <a href="#about" class="bar-item button">ABOUT</a>
+                <a href="#work" class="bar-item button"><i class="fa fa-th"></i> WORK</a>
+                <a href="#contact" class="bar-item button"><i class="fa fa-envelope"></i> CONTACT</a>
+                <a href="#login" class="bar-item button"><i class="fa fa-envelope"></i> LOGIN </a>
+                <a href="#signup" class="bar-item button"><i class="fa fa-envelope"></i> Signup </a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="bar-item button large padding-16">Close ×</a>
+        <a href="#about" onclick="close()" class="bar-item button">ABOUT</a>
+        <a href="#work" onclick="close()" class="bar-item button">WORK</a>
+        <a href="#contact" onclick="close()" class="bar-item button">CONTACT</a>
+        <a href="#login" onclick="close()" class="bar-item button">Login</a>
+        <a href="#Signup" onclick="close()" class="bar-item button">Signup</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 display-container grayscale-min" id="home">
+        <div class="display-left text-white" style="padding:48px">
+            <span class="jumbo hide-small">Custom Chatrooms With Desired Preferences</span><br>
+            <span class="xxlarge hide-large hide-medium">Chat with people online</span><br>
+            <span class="large">Find other people that are looking for friends.</span>
+            <p><a href="#about" class="button white padding-large large margin-top opacity hover-opacity-off">Learn more
+                    and start today</a></p>
+        </div>
+        <div class="display-bottomleft text-grey large" style="padding:24px 48px">
+            <i class="fa fa-facebook-official hover-opacity"></i>
+            <i class="fa fa-instagram hover-opacity"></i>
+            <i class="fa fa-snapchat hover-opacity"></i>
+            <i class="fa fa-pinterest-p hover-opacity"></i>
+            <i class="fa fa-twitter hover-opacity"></i>
+            <i class="fa fa-linkedin hover-opacity"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="container" style="padding:128px 16px" id="about">
+        <h3 class="center">ABOUT SOCIALMED</h3>
+        <p class="center large">Core Values of our website</p>
+        <div class="row-padding center" style="margin-top:64px">
+            <div class="quarter">
+                <i class="fas fa-user-friends margin-bottom jumbo center"></i>
+                <p class="large">Respect</p>
+                <p>We expect everyone to respect each other as people and have friendly conversations.</p>
+            </div>
+            <div class="quarter">
+                <i class="fa fa-heart margin-bottom jumbo"></i>
+                <p class="large">Safe</p>
+                <p>We want everyone who uses our website to feel safe in their secure chat rooms and not have the fear
+                    of being bullied.
+                </p>
+            </div>
+            <div class="quarter">
+                <i class="fa fa-smile margin-bottom jumbo"></i>
+                <p class="large">User-Friendly</p>
+                <p> Our services are made by kids like you, so we understand that havinga complicated webiste should not be 
+                  there but instead there should be a simple environment. If you want to make a suggestion to the website
+                you can say it in the Contact Us section. </p>
+            </div>
+            <div class="quarter">
+                <i class="fa fa-cog margin-bottom jumbo"></i>
+                <p class="large">Support</p>
+                <p> We have a support team that will be there for you anytime. This team would be a bot that can respond
+                  to you and then if you want to be connected to a real person you can request that too!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promo Section - "We know design" -->
+    <div class="container light-grey" style="padding:128px 16px">
+        <div class="row-padding">
+            <div class="col m6">
+                <h3>We know design.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut
+                    labore et dolore.</p>
+            </div>
+            <div class="col m6">
+                <img class="image round-large" src="/1stpageimages/chatroom.png" alt="Custom Chatrooms" width="800"
+                    height="594">
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+
+    <div class="container" style="padding:128px 16px" id="team">
+        <h3 class="center">THE TEAM</h3>
+        <p class="center large">The ones who runs this company</p>
+        <div class="row-padding grayscale" style="margin-top:64px">
+            <div class="col 10 m6 margin-bottom">
+                <div class="card">
+                    <img src="/1stpageimages/pravardh.jpg" alt="Pravardh" style="width:100%">
+                    <div class="container">
+                        <h3>Pravardh Mishra</h3>
+                        <p class="opacity">CTO and Programmer</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                            elementum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3 m6 margin-bottom">
+                <div class="card">
+                    <img src="/w3images/team1.jpg" alt="Sweekrit" style="width:100%">
+                    <div class="container">
+                        <h3>Sweekrit Bhatnagar</h3>
+                        <p class="opacity">CDO and Programmer</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                            elementum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3 m6 margin-bottom">
+                <div class="card">
+                    <img src="/1stpageimages/krishiv.jpg" alt="Krishiv" style="width:100%">
+                    <div class="container">
+                        <h3>Krishiv Aggrawal</h3>
+                        <p class="opacity">CMO and Programmer</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                            elementum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3 m6 margin-bottom">
+                <div class="card">
+                    <img src="/1stpageimages/ishaan.jpeg" alt="Ishaan" style="width:100%">
+                    <div class="container">
+                        <h3>Ishaan Garg</h3>
+                        <p class="opacity">Lead Programmer</p>
+                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                            elementum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3 m6 margin-bottom">
+              <div class="card">
+                  <img src="/1stpageimages/aashrith.jpg" alt="Aashrith" style="width:100%">
+                  <div class="container">
+                      <h3>Aashrith Bandaru</h3>
+                      <p class="opacity">COO and Programmer</p>
+                      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                          elementum.</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Promo Section "Statistics" -->
+    <div class="container row center dark-grey padding-64">
+        <div class="quarter">
+            <span class="xxlarge">9+</span>
+            <br>Partners
+        </div>
+        <div class="quarter">
+            <span class="xxlarge">205+</span>
+            <br> Chatrooms Made
+        </div>
+        <div class="quarter">
+            <span class="xxlarge">487+</span>
+            <br>Happy Clients
+        </div>
+        <div class="quarter">
+            <span class="xxlarge">150+</span>
+            <br> VideoCalls
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="container light-grey padding-64">
+        <div class="row-padding">
+            <div class="col m6">
+                <h3>Our Skills.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+                    tempor incididunt ut labore et dolore.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+                    tempor incididunt ut labore et dolore.</p>
+            </div>
+            <div class="col m6">
+                <p class="wide"><i class="fa fa-camera margin-right"></i>Maintaining Privacy</p>
+                <div class="grey">
+                    <div class="container dark-grey center" style="width:100%">100%</div>
+                </div>
+                <p class="wide"><i class="fa fa-desktop margin-right"></i>Web Design</p>
+                <div class="grey">
+                    <div class="container dark-grey center" style="width:55%">55%</div>
+                </div>
+                <p class="wide"><i class="fa fa-photo margin-right"></i>User Connectivity</p>
+                <div class="grey">
+                    <div class="container dark-grey center" style="width:79%">79%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container light-grey" style="padding:128px 16px" id="contact">
+        <h3 class="center">CONTACT</h3>
+        <p class="center large">Lets get in touch. Send us a message:</p>
+        <div style="margin-top:48px">
+            <p><i class="fa fa-map-marker fa-fw xxlarge margin-right"></i> Fremont, California (US)</p>
+            <p><i class="fa fa-phone fa-fw xxlarge margin-right"></i> Phone: +00 151515</p>
+            <p><i class="fa fa-envelope fa-fw xxlarge margin-right"> </i> Email: mail@mail.com</p>
+            <br>
+            <form action="/action_page" target="_blank">
+                <p><input class="input border" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="input border" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="input border" type="text" placeholder="Subject" required name="Subject"></p>
+                <p><input class="input border" type="text" placeholder="Message" required name="Message"></p>
+                <p>
+                    <button class="button black" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </p>
+            </form>
+            <!-- Image of location/map -->
+            <img src="/w3images/map.jpg" class="image greyscale" style="width:100%;margin-top:48px">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="center black padding-64">
+        <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+        <div class="xlarge section">
+            <i class="fa fa-facebook-official hover-opacity"></i>
+            <i class="fa fa-instagram hover-opacity"></i>
+            <i class="fa fa-snapchat hover-opacity"></i>
+            <i class="fa fa-pinterest-p hover-opacity"></i>
+            <i class="fa fa-twitter hover-opacity"></i>
+            <i class="fa fa-linkedin hover-opacity"></i>
+        </div>
+
+        <!-- Log In Section-->
+        <div class="bar-item-button" style="padding:10px 10px" id="login">
+            <h3 class="center">Login</h3>
+            <form action="/Login.html" target="_blank">
+                <p>
+                    <button class="button black" type="submit">
+                        <i class="fa fa-paper-plane"></i> Go to the Login Page
+                    </button>
+                </p>
+            </form>
+        </div>
+        <!-- Sign Up Section-->
+        <div class="bar-item-button" style="padding:10px 10px" id="signup">
+            <h3 class="center">Signup</h3>
+            <form action="/Signup.html" target="_blank">
+                <p>
+                    <button class="button black" type="submit">
+                        <i class="fa fa-paper-plane"></i> Go to the Signup Page
+                    </button>
+                </p>
+            </form>
+        </div>
+
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
