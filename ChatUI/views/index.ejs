@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+ 
+  <style>
+    body{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  
+  </style>
+</head>
+<body>
+  <table style="width: 100%; height: 100%; border-width:unset; padding: 0px;">
+    <tr style="background-color:rgb(48, 48, 114); color: white; text-align: center; border-width: 0%;">
+     <td>
+          <h1>Chatrooms: Which one would you like to join?</h1>
+      </td>
+    </tr>
+    <tr style="padding: 0%;">             
+        <tr  style=" text-align: center; border-width: 0%;padding: 0px;">
+          <td style="padding: 10px;"><b>Please create a CHAT room</b></td>
+        </tr>
+        <tr  style=" text-align: center; border-width: 0%;">
+          <td style="padding: 10px;">
+            <form action="/room" method="POST">
+              <input name="room" type="text" required maxlength="10">
+                <button type="submit">New Room</button>
+            </form>
+          </td>
+        </tr>
+    </tr> 
+    <tr style="border-width: 0px;">
+    <table style="padding: 5px;">
+      <tr>
+      <td align="center">
+        <div id="room-container">
+          <tr>
+          <% Object.keys(rooms).forEach(room => { %>
+            <td style="height: 150px; width: 150px; background-color: lightblue; 
+            text-align: center; vertical-align: bottom;">
+              <div><b><%= room %></b></div>
+              <br><br>
+              <button style="background-color: white;"><a style="text-decoration:none" href="/<%= room %>"><b>Join</b></a></button>
+              <br><br>
+            </td>
+            <% }) %>
+          </tr>
+          </div>
+      </td>
+      </tr>
+    </table>  
+    </tr>
+</table>
+<script src="./scrript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+<script>
+  new Darkmode().showWidget();
+</script> 
+</body>
+</html>
