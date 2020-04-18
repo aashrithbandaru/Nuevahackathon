@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<title> SocialMED </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="code.css">
+<script src="https://kit.fontawesome.com/bb27808a60.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background: blue;
+        min-height: 100%;
+    }
+
+    .bar .button {
+        padding: 16px;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="top">
+        <div class="bar white card" id="myNavbar">
+            <a href="#home" class="bar-item button wide">SocialMed</a>
+            <!-- Right-sided navbar links -->
+            <div class="right hide-small">
+                <a href="#promo" class="bar-item button"><i class="fas fa-comments"></i> Promo</a>
+                <a href="#team" class="bar-item button"><i class="fa fa-user"></i> TEAM</a>
+                <a href="#stats" class="bar-item button"><i class="fas fa-table"></i> STATS</a>
+                <a href="#login" class="bar-item button"><i class="fa fa-envelope"></i> LOGIN </a>
+                <a href="#signup" class="bar-item button"><i class="fa fa-envelope"></i> SIGNUP </a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="bar-item button large padding-16">Close ×</a>
+        <a href="#promo" onclick="close()" class="bar-item button">PROMO</a>
+        <a href="#team" onclick="close()" class="bar-item button">TEAM</a>
+        <a href="#stats" onclick="close()" class="bar-item button">STATS</a>
+        <a href="#login" onclick="close()" class="bar-item button">LOGIN</a>
+        <a href="#Signup" onclick="close()" class="bar-item button">SIGNUP</a>
+    </nav>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 display-container grayscale-min" id="home">
+        <div class="display-left text-white" style="padding:48px">
+            <span class="jumbo hide-small">Chat with people online</span><br>
+            <span class="xxlarge hide-large hide-medium">Chat with people online</span><br>
+            <span class="large">Find other people that are looking for friends.</span>
+            <p><a href="#about" class="button white padding-large large margin-top opacity hover-opacity-off">Learn more
+                    and start today</a></p>
+        </div>
+        <div class="display-bottomleft text-grey large" style="padding:24px 48px">
+            <i class="fa fa-facebook-official hover-opacity"></i>
+            <i class="fa fa-instagram hover-opacity"></i>
+            <i class="fa fa-snapchat hover-opacity"></i>
+            <i class="fa fa-pinterest-p hover-opacity"></i>
+            <i class="fa fa-twitter hover-opacity"></i>
+            <i class="fa fa-linkedin hover-opacity"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="container light-blue" style="padding:128px 16px" id="about">
+        <h3 class=" center">ABOUT SOCIALMED</h3>
+        <p class="center large">Core Values of our website</p>
+        <div class="row-padding center" style="margin-top:64px">
+            <div class="quarter">
+                <i class="fas fa-user-friends margin-bottom jumbo center"></i>
+                <p class="large">Respect</p>
+                <p>We expect everyone to respect each other as people and have friendly conversations.</p>
+            </div>
+            <div class="quarter">
+                <i class="fa fa-heart margin-bottom jumbo"></i>
+                <p class="large">Safe</p>
+                <p>We want everyone who uses our website to feel safe in their secure chat rooms and not
+                    have the fear of being bullied.
+                </p>
+            </div>
+            <div class="quarter">
+                <i class="far fa-smile margin-bottom jumbo"></i>
+                <p class="large">Positivity</p>
+                <p>We expect all our users to show positivity in their respective chats.</p>
+            </div>
+            <div class="quarter">
+                <i class="fa fa-cog margin-bottom jumbo"></i>
+                <p class="large">Support</p>
+                <p>We want everyone to feel supported with whatever they talk about.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promo Section - "Chat Room" -->
+    <div class="container light-grey" style="padding:128px 16px" id="promo">
+        <div class="row-padding">
+            <div class="col m6">
+                <h3>Chat Rooms</h3>
+                <p>We created chat rooms so people can talk to others when <br> they need help. They can access
+                    therapists whenever they <br> need through this website as well as talk to other
+                    people<br>who are also looking for friends or are willing to help. </p>
+            </div>
+            <div class="col m6">
+                <img class="image round-large"
+                    src="data:image/jpeg;base64,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"
+                    alt="Buildings" width="700" height="394">
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="container light-blue" style="padding:128px 16px" id="team">
+        <h3 class="center">THE TEAM</h3>
+        <p class="center large">The ones who runs this company</p>
+        <div class="row-padding" style="margin-top:64px">
+            <div class="col l3 m6 margin-bottom">
+                <div class="card">
+                    <img src="https://lh3.googleusercontent.com/-iOsoEXq3NKU/XpYBpheY96I/AAAAAAAAB7Y/Nf3UQTRWo08saiWyp1Ys0yRJY3k_N_96QCK8BGAsYHg/s512/ishaan.jpeg"
+                        alt="Ishaan" style="width:100%">
+                    <div class="container">
+                        <h3>Ishaan Garg</h3>
+                        <p class="opacity">CEO, Front End Developer</p>
+                        <p>This is my first time participating in NuevaHacks. I have had experience in coding before
+                            and I wanted to do this project so we can help people in need.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3 m6 margin-bottom">
+                <div class="card">
+                    <img src="https://lh3.googleusercontent.com/-soTd8Pus4ag/XpYBtKhGFYI/AAAAAAAAB7k/V_4wPkdH5wIT0PS7OGz5pg_DQPFJZoB9QCK8BGAsYHg/s512/pravardh.jpg"
+                        alt="Pravardh" style="width:100%">
+                    <div class="container">
+                        <h3>Pravardh Mishra</h3>
+                        <p class="opacity">Front End Developer, Head Programmer</p>
+                        <p>This is my second year doing NuevaHacks. I love to program and I know people that suffer
+                            from depression and wanted to help others like them.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3 m6 margin-bottom">
+                <div class="card">
+                    <img src="https://lh3.googleusercontent.com/-RVfuH8w0CHs/XpYBmus6ChI/AAAAAAAAB7M/V_tHNV901m0oLjaAC8m5LHymczJPj1BRQCK8BGAsYHg/s512/krishiv.jpg"
+                        alt="Krishiv" style="width:100%">
+                    <div class="container">
+                        <h3>Krishiv Aggarwal</h3>
+                        <p class="opacity">CMO, Front End Developer</p>
+                        <p> This is also my second year of doing NuevaHacks and coding is my passion. I chose to
+                            participate in making this website because I wanted to make a difference.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l3 m6 margin-bottom">
+                <div class="card">
+                    <img src="https://lh3.googleusercontent.com/-lKYj3KP9ezE/XpZDUVT0EKI/AAAAAAAAB-w/Wb16wht4F_U45OFyH5Xi4eR6bRpzDlEbQCK8BGAsYHg/s208/sweekrit.png"
+                        alt="Sweekrit" style="width:100%">
+                    <div class="container">
+                        <h3>Sweekrit Bhatnagar</h3>
+                        <p class="opacity">CDO, Back End Developer</p>
+                        <p> This is my first year participating in NuevaHacks. I wanted to create this site because I
+                            believe that depression is a serious problem, and I wanted to help.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m6 margin-bottom">
+                <div class="card">
+                    <img src="https://lh3.googleusercontent.com/-kF-BYgnxMtU/XpZESQBroHI/AAAAAAAAB_I/OcYazC33IIcrdgIHd-bQm0V7T9AQayX9gCK8BGAsYHg/s175/aashrith.jpg"
+                        alt="Aashrith" style="width:70%">
+                    <div class="container">
+                        <h3>Aashrith Bandaru</h3>
+                        <p class="opacity">Front End Developer,team creator </p>
+                        <p>This is my first year doing NuevaHacks. I have a strong passion for coding and hope that
+                            our project can help many people that are suffering from mental health issues.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promo Section "Statistics" -->
+    <div class="container row center pink padding-64" id="stats">
+        <div class="quarter">
+            <span class="xxlarge">2000+</span>
+            <br>Lines of Code
+        </div>
+        <div class="quarter">
+            <span class="xxlarge">205</span>
+            <br>Chatrooms Made
+        </div>
+        <div class="quarter">
+            <span class="xxlarge">487</span>
+            <br>Happy Clients
+        </div>
+        <div class="quarter">
+            <span class="xxlarge">150</span>
+            <br>Video Calls
+        </div>
+    </div>
+
+
+
+    <!-- Skills Section -->
+    <div class="container light-grey padding-64">
+        <div class=" row-padding">
+            <div class="col m6">
+                <h3>Our Skills</h3>
+                <p>We define Maintaining Privacy as not sharing any information to the outside public. Our
+                    <br>Satisfaction rate is determined by test subjects known as our community. </p>
+                <p>Web Design is
+                    where we rate our website based on other professional websites.</p>
+                <p>User Connectivity is determined by the lag rate that the messages are sent at. We sent 100
+                    <br>
+                    messages
+                    through different channels and then took the average time that it takes to be sent,<br>to
+                    come
+                    acrossn a percentage that we have now.</p>
+            </div>
+            <div class="col m6">
+                <p class="wide"><i class="fa fa-camera margin-right">Web Design</i>
+                    <div class="grey">
+                        <div class="container pink center" style="width:85%">85%</div>
+                    </div>
+                    <p class="wide"><i class="fa fa-desktop margin-right"></i>Maintaining Privacy</p>
+                    <div class="grey">
+                        <div class=" container pink center" style="width:100%">100%</div>
+                    </div>
+                    <p class="wide"><i class="fa fa-photo margin-right"></i>User Connectivity</p>
+                    <div class="grey">
+                        <div class="container pink center" style="width:75%">75%</div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="center black padding-64">
+        <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+        <div class="xlarge section">
+            <i class="fa fa-facebook-official hover-opacity"></i>
+            <i class="fa fa-instagram hover-opacity"></i>
+            <i class="fa fa-snapchat hover-opacity"></i>
+            <i class="fa fa-pinterest-p hover-opacity"></i>
+            <i class="fa fa-twitter hover-opacity"></i>
+            <i class="fa fa-linkedin hover-opacity"></i>
+        </div>
+
+        <!-- Log In Section-->
+        <div class="bar-item-button" style="padding:10px 10px" id="login">
+            <h3 class="center">Login</h3>
+            <form action="file:///Users/Ishaan/Desktop/SocialMed1/index.html/ls.html" target="_blank">
+                <p>
+                    <button class="button white" type="submit">
+                        <i class="fa fa-paper-plane"></i> Go to the Login Page
+                    </button>
+                </p>
+            </form>
+        </div>
+        <!-- Sign Up Section-->
+        <div class="bar-item-button" style="padding:10px 10px" id="signup">
+            <h3 class="center">Signup</h3>
+            <form action="file:///Users/Ishaan/Desktop/SocialMed1/index.html/ss.html" target="_blank">
+                <p>
+                    <button class="button white" type="submit">
+                        <i class="fa fa-paper-plane"></i> Go to the Signup Page
+                    </button>
+                </p>
+            </form>
+        </div>
+
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
